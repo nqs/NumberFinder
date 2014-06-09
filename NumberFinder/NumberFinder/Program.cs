@@ -18,6 +18,7 @@ namespace NumberFinder
                 var missingNumber = sequenceProcessor.GetMissingNumber();
 
                 Console.WriteLine(String.Format("Missing Number: {0}", missingNumber));
+                Console.ReadLine();
             }
         }
     }
