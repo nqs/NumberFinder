@@ -35,6 +35,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Autofac">
+      <HintPath>..\packages\Autofac.3.4.1\lib\net40\Autofac.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -44,18 +47,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Infrastructure\Configuration\ConfigurationProvider.cs" />
+    <Compile Include="Infrastructure\Configuration\IConfigurationProvider.cs" />
     <Compile Include="Infrastructure\Finder\INumberFinder.cs" />
+    <Compile Include="Infrastructure\Finder\NaiveNumberFinder.cs" />
+    <Compile Include="Infrastructure\IoC\ConfigurationModule.cs" />
+    <Compile Include="Infrastructure\IoC\ContainerFactory.cs" />
+    <Compile Include="Infrastructure\IoC\SequenceModule.cs" />
+    <Compile Include="Infrastructure\IoC\IOModule.cs" />
+    <Compile Include="Infrastructure\IoC\FinderModule.cs" />
+    <Compile Include="Infrastructure\IO\FileNumberProvider.cs" />
     <Compile Include="Infrastructure\IO\INumberProvider.cs" />
+    <Compile Include="SequenceProcessor.cs" />
     <Compile Include="ISequenceProcessor.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Infrastructure\IoC\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

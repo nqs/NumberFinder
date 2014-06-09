@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 
 namespace NumberFinder.Infrastructure.Finder
 {
-    public interface INumberFinder
+    public class NaiveNumberFinder : INumberFinder
     {
-        int FindMissingNumber(int[] sequence);
+        public int FindMissingNumber(int[] sequence)
+        {
+            return 0;
+        }
     }
 }
