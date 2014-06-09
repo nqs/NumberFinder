@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace NumberFinder
 {
-    public class Program
+    public interface ISequenceProcessor
     {
-        static void Main(string[] args)
-        {
-        }
+        int GetMissingNumber();
     }
 }

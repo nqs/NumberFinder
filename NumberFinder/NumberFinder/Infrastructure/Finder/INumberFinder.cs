@@ -4,12 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NumberFinder
+namespace NumberFinder.Infrastructure.Finder
 {
-    public class Program
+    interface INumberFinder
     {
-        static void Main(string[] args)
-        {
-        }
+        int FindMissingNumber(int[] sequence);
     }
 }

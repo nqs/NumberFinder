@@ -4,12 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NumberFinder
+namespace NumberFinder.Infrastructure.IO
 {
-    public class Program
+    public interface INumberProvider
     {
-        static void Main(string[] args)
-        {
-        }
+        int[] GetNumbers();
     }
 }
